@@ -7,7 +7,7 @@
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn watch\" \"yarn client\"",
     "test": "cd client && yarn test",
-    "install": "yarn install"
+    "install": "cd client && yarn install"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
@@ -23,8 +23,5 @@
   },
   "devDependencies": {
     "concurrently": "^3.5.0"
-  },
-  "jest": {
-    "collectCoverageFrom": ["src/**/*.js", "!<rootDir>/client/"]
   }
 }
