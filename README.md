@@ -25,3 +25,9 @@ yarn dev
 ```
 
 * Access the website on `http://localhost:3000`
+
+
+### Running tests
+```
+yarn test
+```
