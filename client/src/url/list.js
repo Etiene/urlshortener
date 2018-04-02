@@ -5,9 +5,11 @@ class UrlList extends Component {
   urlList() {
     return this.props.urls.map(url => {
       const fullAddress = 'http://localhost:3000/' + url.id;
+      const displayUrl =
+        url.url.length >= 42 ? url.url.substring(0, 42) + '...' : url.url;
       return (
         <p key={url.id}>
-          <a href={fullAddress}>{fullAddress}</a> => {url.url} (visits:
+          <a href={fullAddress}>{fullAddress}</a> => {displayUrl} (visits:
           {url.visited})
           <button
             className="delete-button"
